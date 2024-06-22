@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(200,200,200);
+    width: 100%;
+    height: 150px;
+}
+
+body{
+    background-color: #b59e86;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40rem 40rem; /*Make the grid smaller than the container*/
+    gap: 10px;
+}
+  
+.espacocafe1{
+    width: 35rem;
+    height: 24rem;
+}
+
+.espacocafe2{
+    width: 35rem;
+    height: 24rem;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 15px 50px;
+    font-size: 50px;
+}
+
+.imagemlogo{
+    margin-top: -151px;
+    margin-left: 15px;
+}
+
+.logoheader{
+    width: 9rem;
+    height: 9rem;
+}
+
+.tituloheader{
+    margin-top: -2px;
+}
+
+.imgheader{
+    width: 100%;
+    height: 150px;
+}
+
+.titulo{
+    margin: -144px 0px 0px 400px;
+    font-family: fantasy;
+    color: #d6c8ad;
+    font-weight: normal;
+    font-size: 110px;
+}
+
+nav{
+    background-color: rgb(108 80 62);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconelogin{
+    color: black;
+    margin: 6px -10px 0px 0px;
+    font-size: 50px !important;
+    line-height: 1;
+    display: inline-block;
+}
+
+.userlogin{
+    font-family: auto;
+    font-style: initial;
+    font-size: larger;
+}
