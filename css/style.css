@@ -86,3 +86,10 @@ nav{
     font-style: initial;
     font-size: larger;
 }
+
+.container {
+    width: 83%!important;
+    text-align: center;
+    padding: 15px 50px;
+    font-size: 50px;
+}
