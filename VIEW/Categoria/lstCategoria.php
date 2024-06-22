@@ -26,9 +26,9 @@
 <body>
     <?php include_once 'C:\xampp\htdocs\trabalhophp\VIEW\menu.php'; ?>
     <section>
-        <div class="container">
+        <div class="container indigo lighten-5">
             <h1>Listar Categorias</h1>
-            <table class="highlight">
+            <table class=" highlight">
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>

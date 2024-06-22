@@ -16,9 +16,9 @@
 </head>
 <body>
     <header>
-        <img class="imgheader" src="../images/header.png">
+        <img class="imgheader" src="/trabalhophp/images/header.png">
         <div class="imagemlogo">
-            <img class="logoheader" src="../images/logoheader.png"> 
+            <img class="logoheader" src="/trabalhophp/images/logoheader.png"> 
         </div>
         <div class="tituloheader">
             <h1 class="titulo">Coffee House</h1>
@@ -45,10 +45,10 @@
     <section>
         <div class="grid-container">
             <div class="espacocafe1">
-                <img class="espacocafe1" src="../images/espacocafe1.png">
+                <img class="espacocafe1" src="/trabalhophp/images/espacocafe1.png">
             </div>
             <div class="espacocafe2">
-                <img class="espacocafe2" src="../images/espacocafe2.png">
+                <img class="espacocafe2" src="/trabalhophp/images/espacocafe2.png">
             </div>
         </div>
     </section>

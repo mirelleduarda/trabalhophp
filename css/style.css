@@ -87,7 +87,7 @@ nav{
     font-size: larger;
 }
 
-.container {
+.container > div{
     width: 83%!important;
     text-align: center;
     padding: 15px 50px;
