@@ -34,7 +34,7 @@
                 </div>
             </a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="/trabalhophp/VIEW/inicio.php">Menu</a></li>
+                <li><a href="/trabalhophp/VIEW/inicio.php">Início</a></li>
                 <li><a href="/trabalhophp/VIEW/Categoria/lstCategoria.php">Categorias</a></li>
                 <li><a href="badges.html">Cardápio</a></li>
                 <li><a href="collapsible.html">Funcionários</a></li>
@@ -42,7 +42,7 @@
             </ul>
         </div>
     </nav>
-    <section>
+    <!-- <section>
         <div class="grid-container">
             <div class="espacocafe1">
                 <img class="espacocafe1" src="/trabalhophp/images/espacocafe1.png">
@@ -52,7 +52,7 @@
             </div>
         </div>
         
-    </section>
+    </section> -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/view/js/materialize.js"></script>
     <script src="/view/js/init.js"></script>
