@@ -91,6 +91,7 @@ nav{
 }
 
 .apresentacao__conteudo__texto {
+    margin-left: 50px;
     font-size: 1.3rem;
     font-family: var(--fonte-secundaria);
     max-width: 58.4375rem;

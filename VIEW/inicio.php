@@ -105,6 +105,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/trabalhophp/VIEW/js/materialize.js"></script>
     <script src="/trabalhophp/VIEW/js/init.js"></script>
-    <<script src="/trabalhophp/VIEW/js/script.js"></script>
+    <script src="/trabalhophp/VIEW/js/script.js"></script>
 </body>
 </html>
