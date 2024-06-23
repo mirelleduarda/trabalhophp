@@ -90,6 +90,14 @@ nav{
     font-size: larger;
 }
 
+.apresentacao__conteudo__texto {
+    font-size: 1.3rem;
+    font-family: var(--fonte-secundaria);
+    max-width: 58.4375rem;
+    text-align: justify;
+    position: relative;
+}
+
 .estilo-lista{
     margin-left: 8rem;
     margin-right: 6rem;
@@ -99,5 +107,7 @@ nav{
 }
 
 .titulo-lista{
-    margin-right: 38rem;
+    margin: 2rem 0rem 2rem 0rem;
+    text-decoration: underline;
+    text-align: left;
 }
