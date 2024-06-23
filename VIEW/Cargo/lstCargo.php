@@ -25,25 +25,29 @@
 
 <body>
 	<?php include_once '..\menu.php'; ?>
-    <h1>Listar Cargos</h1>
-    <table class="highlight">
-	<tr>
-	  <th>ID</th>
-	  <th>Nome</th>
-	  <th>Descrição</th>
-	  <th>Salário Base</th>
-	</tr>
-	
-	<?php foreach ($registros as $linha) { ?>
-		<tr>
-			<td> <?php echo $linha['ID']; ?> </td>
-			<td> <?php echo $linha['nome'] ?> </td>
-			<td> <?php echo $linha['descricao'] ?> </td>
-			<td> <?php echo $linha['salarioBase'] ?> </td>
-		</tr>
-	<?php } ?>
-	
-  </table>
+    <section>
+		<div class="estilo-lista brown lighten-4">
+		<h1 class="titulo-lista">Listar Cargos</h1>
+			<table class="highlight">
+				<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Descrição</th>
+				<th>Salário Base</th>
+				</tr>
+				
+				<?php foreach ($registros as $linha) { ?>
+					<tr>
+						<td> <?php echo $linha['ID']; ?> </td>
+						<td> <?php echo $linha['nome'] ?> </td>
+						<td> <?php echo $linha['descricao'] ?> </td>
+						<td> <?php echo $linha['salarioBase'] ?> </td>
+					</tr>
+				<?php } ?>
+			</table>
+		</div>
+		<br>
+	</section>
 
 </body>
 

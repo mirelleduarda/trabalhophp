@@ -26,8 +26,8 @@
 <body>
     <?php include_once 'C:\xampp\htdocs\trabalhophp\VIEW\menu.php'; ?>
     <section>
-        <div class="estilo-lista indigo lighten-5">
-            <h1>Listar Categorias</h1>
+        <div class="estilo-lista brown lighten-4">
+            <h1 class="titulo-lista">Listar Categorias</h1>
             <table class=" highlight">
                 <tr>
                     <th>ID</th>
@@ -44,6 +44,7 @@
                 <?php } ?>
             </table>
         </div>
+        <br>
     </section>
 
 </body>
