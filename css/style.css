@@ -22,13 +22,16 @@ body{
 }
   
 .espacocafe1{
+    margin-top: 1rem;
     width: 35rem;
     height: 24rem;
 }
 
 .espacocafe2{
+    margin-top: 1rem;
     width: 35rem;
     height: 24rem;
+    margin-block-end: 6rem;
 }
 
 .grid-container > div {
@@ -87,9 +90,10 @@ nav{
     font-size: larger;
 }
 
-.estilo-lista > div{
-    width: 83%!important;
+.estilo-lista{
+    margin-left: 8rem;
+    margin-right: 6rem;
     text-align: center;
     padding: 15px 50px;
-    font-size: 50px;
+    font-size: 20px;
 }
