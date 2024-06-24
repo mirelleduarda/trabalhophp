@@ -21,7 +21,7 @@
         return $this->ID;
     }
 
-    public function setId(int $ID)
+    public function setID(int $ID)
     {
         $this->ID = $ID;
     }
@@ -31,7 +31,7 @@
         return $this->nome;
     }
 
-    public function setNome(int $nome)
+    public function setNome(string $nome)
     {
         $this->nome = $nome;
     }
@@ -41,7 +41,7 @@
         return $this->dataNascimento;
     }
 
-    public function setDataNascimento(int $dataNascimento)
+    public function setDataNascimento(string $dataNascimento)
     {
         $this->dataNascimento = $dataNascimento;
     }

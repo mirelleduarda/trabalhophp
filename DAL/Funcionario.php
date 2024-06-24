@@ -15,6 +15,7 @@ class Funcionario
         $con = Conexao::desconectar();
 
         foreach ($registros as $linha) {
+            $fun = new \MODEL\funcionario();
             $fun->setId($linha['ID']);
             $fun->setNome($linha['nome']);
             $fun->setDataNascimento($linha['dataNascimento']);
@@ -24,7 +25,6 @@ class Funcionario
             $fun->setTelefone($linha['telefone']);
             $fun->setEmail($linha['email']);
             $fun->setCargoID($linha['cargoID']);
-            $fun->setQuantidade($linha['cargoID']);
             $lstFun[] = $fun;
         }
         return $lstFun;
@@ -44,30 +44,28 @@ class Funcionario
 
         $fun = new \MODEL\Funcionario();
         $fun->setId($linha['ID']);
-            $fun->setNome($linha['nome']);
-            $fun->setDataNascimento($linha['dataNascimento']);
-            $fun->setCPF($linha['CPF']);
-            $fun->setEndereco($linha['endereco']);
-            $fun->setCidade($linha['cidade']);
-            $fun->setTelefone($linha['telefone']);
-            $fun->setEmail($linha['email']);
-            $fun->setCargoID($linha['cargoID']);
-            $fun->setQuantidade($linha['cargoID']);
+        $fun->setNome($linha['nome']);
+        $fun->setDataNascimento($linha['dataNascimento']);
+        $fun->setCPF($linha['CPF']);
+        $fun->setEndereco($linha['endereco']);
+        $fun->setCidade($linha['cidade']);
+        $fun->setTelefone($linha['telefone']);
+        $fun->setEmail($linha['email']);
+        $fun->setCargoID($linha['cargoID']);
         return $fun;
 
     }
 
-    public function Insert(\MODEL\Inventario $inv)
+    public function Insert(\MODEL\Funcionario $fun)
     {
-        $sql = "INSERT INTO funcionario (ID, nome, dataNacimento, CPF, endereco, cidade, telefone, email, cargoID, quantidade) VALUES (?,?,?,?,?,?,?,?,?,?) ;";
+        $sql = "INSERT INTO funcionario (ID, nome, dataNascimento, CPF, endereco, cidade, telefone, email, cargoID) VALUES (?,?,?,?,?,?,?,?,?) ;";
 
         $con = Conexao::conectar();
         $query = $con->prepare($sql);
-        $result = $query->execute(array($inv->getID(), $inv->getNome(), $inv->getDataNascimento(), $inv->getCPF(), $inv->getEndereco(), $inv->getcidade(), $inv->getTelefone(), $inv->getEmail(), $inv->getCargoID(), $inv->getQuantidade()));
+        $result = $query->execute(array($fun->getID(), $fun->getNome(), $fun->getDataNascimento(), $fun->getCPF(), $fun->getEndereco(), $fun->getCidade(), $fun->getTelefone(), $fun->getEmail(), $fun->getCargoID()));
         $con = Conexao::desconectar();
       
         return $result; 
-
     }
 }
 

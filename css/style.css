@@ -127,9 +127,9 @@ nav{
 }
 
 .titulo-lista{
-    margin: 2rem 0rem 2rem 0rem;
-    text-decoration: underline;
-    text-align: left;
+  margin: 2rem 0rem 2rem 0rem;
+  text-decoration: underline;
+  text-align: left;
 }
 
 .lacuna{
@@ -138,10 +138,9 @@ nav{
 
 .form-funcionario{
   font-family: serif;
-  color: black;
   font-weight: bold;
-  font-size: 1.6rem;
-  text-align: left;
+  font-size: 1.3rem!important;
+  left: -0.01rem!important;
 }
 
 /* Footer */

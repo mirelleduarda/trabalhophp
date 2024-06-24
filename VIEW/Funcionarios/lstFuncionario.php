@@ -45,7 +45,6 @@
                 <th>Telefone</th>
                 <th>Email</th>
                 <th>ID Cargo</th>
-                <th>Quantidade</th>
                 <?php foreach ($registros as $linha) { ?>
                     <tr>
                         <td> <?php echo $linha['ID']; ?> </td>
@@ -57,7 +56,6 @@
                         <td> <?php echo $linha['telefone'] ?> </td>
                         <td> <?php echo $linha['email'] ?> </td>
                         <td> <?php echo $linha['cargoID'] ?> </td>
-                        <td> <?php echo $linha['quantidade'] ?> </td>
                     </tr>
                 <?php } ?>
             </table>

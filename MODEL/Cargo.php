@@ -4,7 +4,7 @@
     private ?int $ID; 
     private ?string $nome;
     private ?string $descricao;
-    private ?string $salarioBase;
+    private ?float $salarioBase;
 
     public function __construct() { }
 
@@ -20,7 +20,7 @@
     return $this->nome; 
     }
 
-    public function setnome(int $nome){
+    public function setNome(string $nome){
        $this->nome = $nome;     
     }
 
@@ -36,7 +36,7 @@
         return $this->salarioBase;       
     }
 
-    public function setSalarioBase(string $salarioBase){
+    public function setSalarioBase(float $salarioBase){
         $this->salarioBase = $salarioBase; 
     }
 

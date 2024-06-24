@@ -2,6 +2,15 @@
 <html lang="pt-Br">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="logo.ico" href="/trabalhophp/images/logo.ico">
+    <link rel="stylesheet" href="/trabalhophp/css/style.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Cadastrar Funcionário</title>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -16,84 +25,87 @@
 <body>
     <?php include_once '../menu.php'; ?>
     <div class="container blue-grey lighten-5 white-text col s6">
-        <div class="center  blue-grey darken-4">
+        <div class="center blue-grey darken-4">
             <h1>Cadastro de Funcionário</h1>
         </div>
         <div class="container black-text">
-            <form action="insInventario.php" method="POST" class="col s6">
+            <form action="insFuncionario.php" method="POST" class="col s6">
                 <br>
                 <div class="input-field col s8">
-                    <input placeholder="informe o id do software" id="software" name="txtSft" type="text"
-                        class="validate">
-                    <label class="form-funcionario" id="software" for="software">ID</label>
+                    <input placeholder="informe o ID do funcionario" id="funcionario" name="txtID" type="text"
+                        class="lacuna validate">
+                    <label class="form-funcionario" id="funcionario" for="funcionario">ID</label>
                 </div>
 
                 <div class="input-field col s8">
-                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
-                        class="validate black-text">
-                    <label class="form-funcionario" for="responsavel">Nome</label>
+                    <input placeholder="Informe o nome do funcionário" id="nome" name="txtNome" type="text"
+                        class="lacuna validate">
+                    <label class="form-funcionario" for="nome">Nome</label>
                 </div>
 
                 <div class="input-field col s5">
-                    <input placeholder="informe a data de instalação" id="instalacao" name="txtInst" type="date"
+                    <input placeholder="informe a data de nascimento do funcionário" id="data-nascimento" name="txtDataNascimento" type="date"
                         class="lacuna validate">
                     <label class="form-funcionario" for="compra">Data de Nascimento</label>
                 </div>
 
                 <div class="input-field col s8">
-                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
-                        class="validate">
-                    <label class="form-funcionario" for="responsavel">CPF</label>
+                    <input placeholder="Informe o CPF do funcionário (apenas números)" id="CPF" name="txtCPF" type="text"
+                        class="lacuna validate">
+                    <label class="form-funcionario" for="CPF">CPF</label>
                 </div>
 
                 <div class="input-field col s8">
-                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
-                        class="validate">
-                    <label class="form-funcionario" for="responsavel">Enderço</label>
+                    <input placeholder="Informe o endereço do funcionário" id="endereco" name="txtEndereco" type="text"
+                        class="lacuna validate">
+                    <label class="form-funcionario" for="endereco">Endereço</label>
                 </div>
 
                 <div class="input-field col s8">
-                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
-                        class="validate">
-                    <label class="form-funcionario" for="responsavel">Cidade</label>
+                    <input placeholder="Informe a cidade do funcionário" id="cidade" name="txtCidade" type="text"
+                        class="lacuna validate">
+                    <label class="form-funcionario" for="cidade">Cidade</label>
                 </div>
 
                 <div class="input-field col s8">
-                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
-                        class="validate">
-                    <label class="form-funcionario" for="responsavel">Telefone</label>
+                    <input placeholder="Informe o telefone do funcionário" id="telefone" name="txtTelefone" type="text"
+                        class="lacuna validate">
+                    <label class="form-funcionario" for="telefone">Telefone</label>
                 </div>
 
                 <div class="input-field col s8">
-                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
-                        class="validate">
-                    <label class="form-funcionario" for="responsavel">Email</label>
+                    <input placeholder="Informe o e-mail do funcionário" id="email" name="txtEmail" type="email"
+                        class="lacuna validate">
+                    <label class="form-funcionario" for="responsavel">E-mail</label>
                 </div>
 
                 <div class="input-field col s8">
-                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
-                        class="validate">
-                    <label class="form-funcionario" for="responsavel">ID do Cargo</label>
+                    <input placeholder="Informe o ID do cargo do funcionário" id="cargoID" name="txtCargoID" type="text"
+                        class="lacuna validate">
+                    <label class="form-funcionario" for="cargoID">ID do Cargo</label>
                 </div>
-
-                <div class="brown lighten-3 center col s12">
-                    <br>
-                    <button class="waves-effect waves-light btn green" type="submit">
-                        Gravar <i class="material-icons">save</i>
-                    </button>
-                    <button class="waves-effect waves-light btn red" type="reset">
-                        Limpar <i class="material-icons">clear_all</i>
-                    </button>
-                    <button class="waves-effect waves-light btn blue" type="button"
-                        onclick="JavaScript:location.href='lstEquipamento.php'">
-                        Voltar <i class="material-icons">arrow_back</i>
-                    </button>
-                    <br>
-                    <br>
+                <div class="center blue-grey lighten-5 white-text col s6">
+                    <div class="center blue-grey darken-4 col s6">
+                        <br>
+                        <button class="waves-effect waves-light btn green" type="submit">
+                            Gravar <i class="material-icons">save</i>
+                        </button>
+                        <button class="waves-effect waves-light btn red" type="reset">
+                            Limpar <i class="material-icons">clear_all</i>
+                        </button>
+                        <button class="waves-effect waves-light btn blue" type="button"
+                            onclick="JavaScript:location.href='lstFuncionario.php'">
+                            Voltar <i class="material-icons">arrow_back</i>
+                        </button>
+                        <div><br></div>
+                    </div>
                 </div>
             </form>
+            <br>
         </div>
     </div>
+    
+    <br>
 </body>
 
 </html

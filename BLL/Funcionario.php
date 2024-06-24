@@ -25,16 +25,8 @@ class Funcionario
 
         $bllCargo = new \BLL\Cargo();
 
-        //Regra de negócio para somar um no campo quantidade da tabela cargo
-        //com base no cargo que foi informado no campo de funcionário
-        $cargo = $bllCargo->SelectByID($func->getEquipamento()); //recupera o cargo
-
-        //soma 1 no valor do campo quantidade
-        $quantidade = $cargo->getQuantidade();
-        $quantidade++; //$quantidade = $quantidade + $func->getValorQuantidade();
-        $cargo->setQuantidade($quantidade);
-
-        $bllEqpto->Updade($equipamento); // atualiza no banco de dados o registro de equipamento
+        //Regra de negócio 
+        $cargo = $bllCargo->SelectByID($func->getCargoID()); //recupera o cargo
         
         return $dalFunc->Insert($func); //salva o registro de funcionário
 
