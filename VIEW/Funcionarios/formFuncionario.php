@@ -15,28 +15,65 @@
 
 <body>
     <?php include_once '../menu.php'; ?>
-    <div class="container indigo lighten-4 deep-orange-text col s12">
-        <div class="center green">
-            <h1>Inserir Inventario</h1>
+    <div class="container blue-grey lighten-5 white-text col s6">
+        <div class="center  blue-grey darken-4">
+            <h1>Cadastro de Funcionário</h1>
         </div>
-        <div class="row  black-text">
-            <form action="insInventario.php" method="POST" class="col s12">
+        <div class="container black-text">
+            <form action="insInventario.php" method="POST" class="col s6">
+                <br>
                 <div class="input-field col s8">
                     <input placeholder="informe o id do software" id="software" name="txtSft" type="text"
                         class="validate">
-                    <label id="software" for="software">Software</label>
+                    <label class="form-funcionario" id="software" for="software">ID</label>
+                </div>
+
+                <div class="input-field col s8">
+                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
+                        class="validate black-text">
+                    <label class="form-funcionario" for="responsavel">Nome</label>
+                </div>
+
+                <div class="input-field col s5">
+                    <input placeholder="informe a data de instalação" id="instalacao" name="txtInst" type="date"
+                        class="lacuna validate">
+                    <label class="form-funcionario" for="compra">Data de Nascimento</label>
                 </div>
 
                 <div class="input-field col s8">
                     <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
                         class="validate">
-                    <label for="responsavel">Equipamento</label>
+                    <label class="form-funcionario" for="responsavel">CPF</label>
                 </div>
 
-                <div class="input-field col s5">
-                    <input placeholder="informe a data de instalação" id="instalacao" name="txtInst" type="date"
+                <div class="input-field col s8">
+                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
                         class="validate">
-                    <label for="compra">Instalação</label>
+                    <label class="form-funcionario" for="responsavel">Enderço</label>
+                </div>
+
+                <div class="input-field col s8">
+                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
+                        class="validate">
+                    <label class="form-funcionario" for="responsavel">Cidade</label>
+                </div>
+
+                <div class="input-field col s8">
+                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
+                        class="validate">
+                    <label class="form-funcionario" for="responsavel">Telefone</label>
+                </div>
+
+                <div class="input-field col s8">
+                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
+                        class="validate">
+                    <label class="form-funcionario" for="responsavel">Email</label>
+                </div>
+
+                <div class="input-field col s8">
+                    <input placeholder="Informe o id do Equipamento" id="equipamento" name="txtEqpto" type="text"
+                        class="validate">
+                    <label class="form-funcionario" for="responsavel">ID do Cargo</label>
                 </div>
 
                 <div class="brown lighten-3 center col s12">

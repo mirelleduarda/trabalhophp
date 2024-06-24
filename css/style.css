@@ -132,6 +132,18 @@ nav{
     text-align: left;
 }
 
+.lacuna{
+  margin: 1rem 1rem 2rem 0rem;
+}
+
+.form-funcionario{
+  font-family: serif;
+  color: black;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
 /* Footer */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 * {

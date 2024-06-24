@@ -31,10 +31,9 @@
         <div class="estilo-lista-funcionario brown lighten-4">
             <h1 class="titulo-lista-funcionario">
                 Listar Funcionários
-                <a class="cadastrar waves-effect waves-light btn">
-                    <i class="material-icons left"
-                        onclick="JavaScript:location.href='formFuncionario.php'">add
-                    </i>Cadastrar Funcionário</a>
+                <a class="cadastrar waves-effect blue-grey lighten-2 btn" onclick="location.href='formFuncionario.php'">
+                    <i class="material-icons left">add</i>Cadastrar Funcionário
+                </a>
             </h1>
             <table class="responsive-table">
                 <th>ID</th>
