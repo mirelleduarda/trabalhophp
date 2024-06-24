@@ -2,7 +2,7 @@
     namespace DAL;
 
     use PDO; 
-   class Conexao {
+    class Conexao {
     private static $dbNome ='cafeteria'; 
     private static $dbHost = 'localhost';
     private static $dbUsuario = 'root'; 

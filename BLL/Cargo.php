@@ -1,7 +1,7 @@
 <?php
 namespace BLL;
 
-include_once 'C:\xampp\htdocs\trabalhophp1smt\DAL\Cargo.php';
+include_once 'C:\xampp\htdocs\trabalhophp\DAL\Cargo.php';
 use DAL;
 
 class Cargo

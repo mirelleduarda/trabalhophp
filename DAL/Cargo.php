@@ -1,7 +1,7 @@
 <?php 
    namespace DAL; //Data Access Layer
-   include_once 'C:\xampp\htdocs\trabalhophp1smt\DAL\conexao.php';
-   include_once 'C:\xampp\htdocs\trabalhophp1smt\MODEL\Cargo.php';
+   include_once 'C:\xampp\htdocs\trabalhophp\DAL\conexao.php';
+   include_once 'C:\xampp\htdocs\trabalhophp\MODEL\Cargo.php';
 
    class Cargo{
       public function Select(){       

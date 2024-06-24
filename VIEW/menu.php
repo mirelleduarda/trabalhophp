@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="logo.ico" href="/trabalhophp/images/logo.ico">
     <link rel="stylesheet" href="/trabalhophp/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -37,22 +38,12 @@
                 <li><a href="/trabalhophp/VIEW/inicio.php">Início</a></li>
                 <li><a href="/trabalhophp/VIEW/Categoria/lstCategoria.php">Categorias</a></li>
                 <li><a href="badges.html">Cardápio</a></li>
-                <li><a href="collapsible.html">Funcionários</a></li>
+                <li><a href="/trabalhophp/VIEW/Funcionarios/lstFuncionario.php">Funcionários</a></li>
                 <li><a href="/trabalhophp/VIEW/Cargo/lstCargo.php">Cargos</a></li>
             </ul>
         </div>
     </nav>
-    <!-- <section>
-        <div class="grid-container">
-            <div class="espacocafe1">
-                <img class="espacocafe1" src="/trabalhophp/images/espacocafe1.png">
-            </div>
-            <div class="espacocafe2">
-                <img class="espacocafe2" src="/trabalhophp/images/espacocafe2.png">
-            </div>
-        </div>
-        
-    </section> -->
+
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/view/js/materialize.js"></script>
     <script src="/view/js/init.js"></script>
