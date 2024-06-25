@@ -71,8 +71,8 @@
         </ul>
     </div>
     <br>
-    <div class="estilo-lista brown lighten-4">
-        
+    <div class="estilo-lista blue-grey lighten-5">
+        <br><br>
         <p class="apresentacao__conteudo__texto">
             Bem-vindo ao nosso refúgio aromático, onde cada
             xícara conta uma história de paixão e precisão.
@@ -102,6 +102,7 @@
             universo de aromas e sensações, onde a simplicidade de uma xícara de café se torna
             uma experiência única e específica.
         </p>
+        <br><br>
     </div>
     <br>
     <footer class="rodape">

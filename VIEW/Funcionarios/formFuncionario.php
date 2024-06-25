@@ -1,3 +1,15 @@
+<?php
+
+    namespace VIEW\Funcionario;
+    include_once 'C:\xampp\htdocs\trabalhophp\DAL\conexao.php';
+    include_once 'C:\xampp\htdocs\trabalhophp\DAL\Funcionario.php';
+
+    session_start(); // Inicie a sessão
+    $erro = isset($_SESSION['erro']) ? $_SESSION['erro'] : '';
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-Br">
 
@@ -28,6 +40,7 @@
         </div>
         <div class="container black-text">
             <form action="insFuncionario.php" method="POST" class="col s6">
+            <div id="error-message" class="error-message"></div>
                 <br>
                 <div class="input-field col s8">
                     <input placeholder="informe o ID do funcionario" id="funcionario" name="txtID" type="text"
@@ -104,6 +117,23 @@
     </div>
     
     <br>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var errorMessage = '<?php echo $erro; ?>';
+        if (errorMessage) {
+            var errorDiv = document.getElementById('error-message');
+            if (errorDiv) { // Verifica se o elemento foi encontrado
+                errorDiv.textContent = errorMessage;
+                errorDiv.style.display = 'block';
+                M.toast({html: errorMessage, classes: 'rounded red'});
+            } else {
+                console.error('Elemento com ID "error-message" não encontrado.');
+            }
+        }
+        });
+    </script>
+
 </body>
 
 </html

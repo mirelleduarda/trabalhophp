@@ -26,8 +26,10 @@
 	<?php include_once '..\menu.php'; ?>
     <section>
 		<br>
-		<div class="estilo-lista brown lighten-4">
-		<h1 class="titulo-lista">Listar Cargos</h1>
+		<div class="estilo-lista blue-grey lighten-5">
+            <div class="center blue-grey darken-4">
+                <h1 class="titulo-lista white-text">Cargos</h1>
+            </div>
 			<table class="highlight">
 				<tr>
 				<th>ID</th>

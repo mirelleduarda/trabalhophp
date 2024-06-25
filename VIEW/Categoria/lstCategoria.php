@@ -24,29 +24,32 @@
 
 <body>
     <?php include_once 'C:\xampp\htdocs\trabalhophp\VIEW\menu.php'; ?>
-    <section>
-        <br>
-        <div class="estilo-lista brown lighten-4">
-            <h1 class="titulo-lista">Listar Categorias</h1>
-            <table class=" highlight">
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                </tr>
-
-                <?php foreach ($lstCategoria as $categoria) { ?>
+    
+        <section>
+            <br>
+            <div class="estilo-lista blue-grey lighten-5">
+                <div class="center blue-grey darken-4">
+                    <h1 class="titulo-lista white-text">Categorias</h1>
+                </div>
+                <table class=" highlight">
                     <tr>
-                        <td><?php echo $categoria->getID(); ?></td>
-                        <td><?php echo $categoria->getNome(); ?></td>
-                        <td><?php echo $categoria->getDescricao(); ?></td>
-
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
                     </tr>
-                <?php } ?>
-            </table>
-        </div>
-        <br>
-    </section>
+
+                    <?php foreach ($lstCategoria as $categoria) { ?>
+                        <tr>
+                            <td><?php echo $categoria->getID(); ?></td>
+                            <td><?php echo $categoria->getNome(); ?></td>
+                            <td><?php echo $categoria->getDescricao(); ?></td>
+
+                        </tr>
+                    <?php } ?>
+                </table>
+            </div>
+            <br>
+        </section>
 
     <footer class="rodape">
         <section class="footer">

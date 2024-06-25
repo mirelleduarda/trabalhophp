@@ -1,7 +1,7 @@
 <?php 
   include_once 'C:\xampp\htdocs\trabalhophp\MODEL\Funcionario.php';
   include_once 'C:\xampp\htdocs\trabalhophp\BLL\Funcionario.php'; 
-  $ID = (int)$_GET['ID']; 
+  $ID = $_GET['ID']; 
  // echo 'ID: ' . $id . "</br>";
   
   $bllFunc = new BLL\Funcionario();
@@ -40,13 +40,13 @@
         </div>
         <div class="container black-text">
             <form action="formEditFuncionario.php" method="POST" class="col s6">
-                <br>
                 <div class="input-field col s8">
-                    <input value="<?php echo $ID; ?>" id="funcionario" name="txtID" type="text"
-                        class="lacuna validate">
-                    <label class="form-funcionario" id="funcionario" for="funcionario">ID</label>
+                    
+                    <input type="hidden" name="txtID" value=<?php echo $ID; ?>></br> </br>
+                    
+                    <label for="id" class="formEdit-funcionario black-text bold">ID: <?php echo $funcionario->getID() ?></label>
                 </div>
-
+                <br>
                 <div class="input-field col s8">
                     <input value="<?php echo $funcionario->getNome(); ?>" id="nome" name="txtNome" type="text"
                         class="lacuna validate">

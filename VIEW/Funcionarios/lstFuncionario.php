@@ -26,13 +26,17 @@
     <?php include_once '../menu.php'; ?>
     <section>
         <br>
-        <div class="estilo-lista-funcionario brown lighten-4">
-            <h1 class="titulo-lista-funcionario">
-                Listar Funcionários
-                <a class="cadastrar waves-effect brown btn" onclick="location.href='formFuncionario.php'">
-                    <i class="material-icons left">add</i>Cadastrar Funcionário
-                </a>
-            </h1>
+        <div class="estilo-lista-funcionario blue-grey lighten-5">
+                <div class="blue-grey darken-4">
+                    <h1 class="titulo-lista-funcionario white-text">Funcionários
+                        <a class="cadastrar waves-effect brown btn" onclick="location.href='formFuncionario.php'">
+                            <i class="material-icons left">add</i>Cadastrar Funcionário
+                        </a>
+                    </h1>
+                </div>
+
+            <div id="error-message" class="error-message"></div>
+
             <table class="responsive-table">
                 <th>ID</th>
                 <th>Nome</th>
@@ -60,7 +64,7 @@
                             <a class="btn-floating blue accent-4 waves-effect" onclick="JavaScript:location.href='formEditFuncionario.php?id=' + '<?php echo $funcionario->getID(); ?>'">
                                 <i class="material-icons">edit</i>
                             </a>
-                            <a class="btn-floating red accent-4">
+                            <a class="btn-floating red accent-4" onclick="JavaScript: remover( <?php echo $funcionario->getID(); ?> )">
                                 <i class="material-icons">delete_forever</i>
                             </a>
                         </td>
@@ -121,7 +125,17 @@
                 </div>
             </div>
         </section>
-    </footer>  
+    </footer>
+    
 </body>
 
 </html>
+
+
+<script>
+    function remover(ID) {
+        if (confirm('Deseja excluir permanentemente o funcionário do ID ' + ID + '?')) {
+            location.href = 'remover.php?id=' + ID;
+        }
+    }
+</script>
