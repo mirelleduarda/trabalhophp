@@ -17,8 +17,6 @@
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="../js/init.js"></script>
-    
-    <?php include_once 'C:\xampp\htdocs\lpadsphpt1\lpadsphpt120240606\BLL\Departamento.php' ?>
 
 </head>
 

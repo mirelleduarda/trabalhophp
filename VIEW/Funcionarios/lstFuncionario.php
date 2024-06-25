@@ -45,6 +45,10 @@
                 <th>Telefone</th>
                 <th>Email</th>
                 <th>ID Cargo</th>
+                <th>Operações
+                    <a class="btn-floating disabled"><i class="material-icons">add</i></a>
+                    <a class="btn-floating disabled"><i class="material-icons">add</i></a>
+                </th>
                 <?php foreach ($registros as $linha) { ?>
                     <tr>
                         <td> <?php echo $linha['ID']; ?> </td>
