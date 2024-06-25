@@ -35,8 +35,6 @@
                     </h1>
                 </div>
 
-            <div id="error-message" class="error-message"></div>
-
             <table class="responsive-table">
                 <th>ID</th>
                 <th>Nome</th>

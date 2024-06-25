@@ -72,7 +72,7 @@ class Funcionario
         
         $con = Conexao::conectar();
         $query = $con->prepare($sql);
-        $result = $query->execute(array($fun->nome(), $fun->getDataNascimento(), $fun->getCPF(), $fun->getEndereco(), $fun->getCidade() , $fun->getTelefone(), $fun->getEmail(), $fun->getCargoID()));
+        $result = $query->execute(array($fun->getNome(), $fun->getDataNascimento(), $fun->getCPF(), $fun->getEndereco(), $fun->getCidade() , $fun->getTelefone(), $fun->getEmail(), $fun->getCargoID(), $fun->getID()));
         $con = Conexao::desconectar();
       
         return $result; 

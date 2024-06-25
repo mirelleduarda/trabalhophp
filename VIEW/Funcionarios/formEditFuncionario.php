@@ -39,7 +39,7 @@
             <h1>Editar Funcionário</h1>
         </div>
         <div class="container black-text">
-            <form action="formEditFuncionario.php" method="POST" class="col s6">
+            <form action="editFuncionario.php" method="POST" class="col s6">
                 <br>
                 <div class="lacuna-edit input-field col s8">
                     <input type="hidden" name="txtID" value=<?php echo $ID; ?> ></br> </br>
@@ -96,7 +96,8 @@
                 <div class="center blue-grey lighten-5 white-text col s6">
                     <div class="center blue-grey darken-4 col s6">
                         <br>
-                        <button class="waves-effect waves-light btn green" type="submit">
+                        <button class="waves-effect waves-light btn green" type="submit"
+                            onclick="JavaScript:location.href='lstFuncionario.php'">
                             Salvar <i class="material-icons">save</i>
                         </button>
                         <button class="waves-effect waves-light btn red" type="reset">

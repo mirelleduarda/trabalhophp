@@ -91,7 +91,8 @@
                 <div class="center blue-grey lighten-5 white-text col s6">
                     <div class="center blue-grey darken-4 col s6">
                         <br>
-                        <button class="waves-effect waves-light btn green" type="submit">
+                        <button class="waves-effect waves-light btn green" type="submit"
+                            onclick="JavaScript:location.href='lstFuncionario.php'">
                             Gravar <i class="material-icons">save</i>
                         </button>
                         <button class="waves-effect waves-light btn red" type="reset">

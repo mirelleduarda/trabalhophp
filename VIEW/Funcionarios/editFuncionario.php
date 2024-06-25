@@ -5,7 +5,7 @@
 
   $funcionario = new \MODEL\Funcionario();
 
-  $funcionario->setID($_POST['txtID']);
+  $funcionario->setID((int)$_POST['txtID']);
   $funcionario->setNome($_POST['txtNome']);
   $funcionario->setDataNascimento($_POST['txtDataNascimento']);
   $funcionario->setCPF($_POST['txtCPF']);

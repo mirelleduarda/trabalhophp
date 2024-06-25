@@ -107,11 +107,11 @@ nav{
 }
 
 .cadastrar{
-  margin-left: 45rem;
+  margin-left: 43rem;
 }
 
 .titulo-lista-funcionario{
-  margin: 2rem 0rem 2rem 0rem;
+  margin: 2rem 0rem 2rem 2rem;
   height: 5rem;
   text-align: left;
   font-size: 4rem;
@@ -125,7 +125,7 @@ nav{
 }
 
 .titulo-lista{
-  margin: 2rem 0rem 2rem 0rem;
+  margin: 2rem 0rem 2rem 2rem;
   height: 5.3rem;
   text-align: left;
 }
