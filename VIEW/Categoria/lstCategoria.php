@@ -1,10 +1,9 @@
 <?php
-  namespace VIEW\Cargo;
-  include_once 'C:\xampp\htdocs\trabalhophp1smt\DAL\conexao.php';
-  $sql = "select * from categoria;";
-  $con = \DAL\Conexao::conectar();
-  $registros = $con->query($sql);
-  $con = \DAL\Conexao::desconectar();
+  namespace VIEW\Categoria;
+  include_once 'C:\xampp\htdocs\trabalhophp\BLL\Categoria.php';
+
+  $bllCategoria = new \BLL\Categoria();
+  $lstCategoria = $bllCategoria->Select();
 ?>
 
 <!DOCTYPE html>
@@ -36,11 +35,12 @@
                     <th>Descrição</th>
                 </tr>
 
-                <?php foreach ($registros as $linha) { ?>
+                <?php foreach ($lstCategoria as $categoria) { ?>
                     <tr>
-                        <td> <?php echo $linha['ID']; ?> </td>
-                        <td> <?php echo $linha['nome'] ?> </td>
-                        <td> <?php echo $linha['descricao'] ?> </td>
+                        <td><?php echo $categoria->getID(); ?></td>
+                        <td><?php echo $categoria->getNome(); ?></td>
+                        <td><?php echo $categoria->getDescricao(); ?></td>
+
                     </tr>
                 <?php } ?>
             </table>

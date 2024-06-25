@@ -12,7 +12,7 @@
         return $this->ID; 
     }
 
-    public function setId(int $ID){
+    public function setID(int $ID){
         $this->ID = $ID;     
     }
 

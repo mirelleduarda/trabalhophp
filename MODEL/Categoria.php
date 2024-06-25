@@ -11,7 +11,7 @@
         return $this->ID; 
     }
 
-    public function setId(int $ID){
+    public function setID(int $ID){
         $this->ID = $ID;     
     }
 
@@ -19,7 +19,7 @@
     return $this->nome; 
     }
 
-    public function setnome(int $nome){
+    public function setNome(string $nome){
        $this->nome = $nome;     
     }
 

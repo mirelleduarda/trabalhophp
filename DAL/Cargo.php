@@ -47,7 +47,7 @@
       public function SelectID(int $ID){}
       public function SelectNome(string $nome){}
       public function SelectDesc(string $descricao){}
-      public function SelectSalarioBase(string $salarioBase){}
+      public function SelectSalarioBase(float $salarioBase){}
    }
 
 ?>

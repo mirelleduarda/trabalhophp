@@ -1,10 +1,9 @@
 <?php
   namespace VIEW\Cargo;
-  include_once 'C:\xampp\htdocs\trabalhophp1smt\DAL\conexao.php';
-  $sql = "select * from cargo;";
-  $con = \DAL\Conexao::conectar();
-  $registros = $con->query($sql);
-  $con = \DAL\Conexao::desconectar();
+  include_once 'C:\xampp\htdocs\trabalhophp\BLL\Cargo.php';
+  
+  $bllCargo = new \BLL\Cargo();
+  $lstCargo = $bllCargo->Select();
 ?>
 
 <!DOCTYPE html>
@@ -37,12 +36,12 @@
 				<th>Salário Base</th>
 				</tr>
 				
-				<?php foreach ($registros as $linha) { ?>
+				<?php foreach ($lstCargo as $cargo) { ?>
 					<tr>
-						<td> <?php echo $linha['ID']; ?> </td>
-						<td> <?php echo $linha['nome'] ?> </td>
-						<td> <?php echo $linha['descricao'] ?> </td>
-						<td> <?php echo $linha['salarioBase'] ?> </td>
+                        <td><?php echo $cargo->getID(); ?></td>
+                        <td><?php echo $cargo->getNome(); ?></td>
+                        <td><?php echo $cargo->getDescricao(); ?></td>
+                        <td><?php echo $cargo->getSalarioBase(); ?></td>
 					</tr>
 				<?php } ?>
 			</table>

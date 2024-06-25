@@ -1,7 +1,7 @@
 <?php 
    namespace DAL; //Data Access Layer
    include_once 'C:\xampp\htdocs\trabalhophp\DAL\conexao.php';
-   include_once 'C:\xampp\htdocs\trabalhophp\MODEL\Cargo.php';
+   include_once 'C:\xampp\htdocs\trabalhophp\MODEL\Categoria.php';
 
    class Categoria{
       public function Select(){       
@@ -14,7 +14,7 @@
 
          foreach ($registros as $linha){
              $categoria = new \MODEL\Categoria(); 
-             $categoria->setId($linha['ID']); 
+             $categoria->setID($linha['ID']); 
              $categoria->setNome($linha['nome']);
              $categoria->setDescricao($linha['descricao']);
              $lstCategoria[] = $categoria; 

@@ -1,11 +1,9 @@
 <?php
     namespace VIEW\Funcionario;
-    include_once 'C:\xampp\htdocs\trabalhophp\DAL\conexao.php';
-    include_once 'C:\xampp\htdocs\trabalhophp\DAL\Funcionario.php';
-    $sql = "select * from funcionario;";
-    $con = \DAL\Conexao::conectar();
-    $registros = $con->query($sql);
-    $con = \DAL\Conexao::desconectar();
+    include_once 'C:\xampp\htdocs\trabalhophp\BLL\Funcionario.php';
+
+    $bllFuncionario = new \BLL\Funcionario();
+    $lstFuncionario = $bllFuncionario->Select();
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +29,7 @@
         <div class="estilo-lista-funcionario brown lighten-4">
             <h1 class="titulo-lista-funcionario">
                 Listar Funcionários
-                <a class="cadastrar waves-effect blue-grey lighten-2 btn" onclick="location.href='formFuncionario.php'">
+                <a class="cadastrar waves-effect brown btn" onclick="location.href='formFuncionario.php'">
                     <i class="material-icons left">add</i>Cadastrar Funcionário
                 </a>
             </h1>
@@ -45,21 +43,27 @@
                 <th>Telefone</th>
                 <th>Email</th>
                 <th>ID Cargo</th>
-                <th>Operações
-                    <a class="btn-floating disabled"><i class="material-icons">add</i></a>
-                    <a class="btn-floating disabled"><i class="material-icons">add</i></a>
-                </th>
-                <?php foreach ($registros as $linha) { ?>
+                <th>Operações</th>
+                <?php foreach ($lstFuncionario as $funcionario) { ?>
                     <tr>
-                        <td> <?php echo $linha['ID']; ?> </td>
-                        <td> <?php echo $linha['nome'] ?> </td>
-                        <td> <?php echo $linha['dataNascimento'] ?> </td>
-                        <td> <?php echo $linha['CPF'] ?> </td>
-                        <td> <?php echo $linha['endereco'] ?> </td>
-                        <td> <?php echo $linha['cidade'] ?> </td>
-                        <td> <?php echo $linha['telefone'] ?> </td>
-                        <td> <?php echo $linha['email'] ?> </td>
-                        <td> <?php echo $linha['cargoID'] ?> </td>
+                        <td><?php echo $funcionario->getID(); ?></td>
+                        <td><?php echo $funcionario->getNome(); ?></td>
+                        <td><?php echo $funcionario->getDataNascimento(); ?></td>
+                        <td><?php echo $funcionario->getCPF(); ?></td>
+                        <td><?php echo $funcionario->getEndereco(); ?></td>
+                        <td><?php echo $funcionario->getCidade(); ?></td>
+                        <td><?php echo $funcionario->getTelefone(); ?></td>
+                        <td><?php echo $funcionario->getEmail(); ?></td>
+                        <td><?php echo $funcionario->getCargoID(); ?></td>
+
+                        <td>
+                            <a class="btn-floating blue accent-4 waves-effect" onclick="JavaScript:location.href='formFuncionario.php?id=' + '<?php echo $funcionario->getID(); ?>'">
+                                <i class="material-icons">edit</i>
+                            </a>
+                            <a class="btn-floating red accent-4">
+                                <i class="material-icons">delete_forever</i>
+                            </a>
+                        </td>
                     </tr>
                 <?php } ?>
             </table>
