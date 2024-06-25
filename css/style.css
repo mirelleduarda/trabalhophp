@@ -134,6 +134,11 @@ nav{
   margin: 1rem 1rem 2rem 0rem;
 }
 
+.lacuna-edit{
+  margin-bottom: 5rem!important;
+}
+
+
 .form-funcionario{
   font-family: serif;
   font-weight: bold;
@@ -146,16 +151,6 @@ nav{
   font-weight: bold;
   font-size: 2.3rem!important;
   left: -0.01rem!important;
-}
-
-.error-message{
-    display: none;
-    color: red;
-    background-color: #f2dede;
-    padding: 10px;
-    border: 1px solid #ebccd1;
-    border-radius: 5px;
-    margin: 20px 0;
 }
 
 /* Footer */

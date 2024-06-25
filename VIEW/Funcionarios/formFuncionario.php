@@ -40,14 +40,7 @@
         </div>
         <div class="container black-text">
             <form action="insFuncionario.php" method="POST" class="col s6">
-            <div id="error-message" class="error-message"></div>
                 <br>
-                <div class="input-field col s8">
-                    <input placeholder="informe o ID do funcionario" id="funcionario" name="txtID" type="text"
-                        class="lacuna validate">
-                    <label class="form-funcionario" id="funcionario" for="funcionario">ID</label>
-                </div>
-
                 <div class="input-field col s8">
                     <input placeholder="Informe o nome do funcionário" id="nome" name="txtNome" type="text"
                         class="lacuna validate">
