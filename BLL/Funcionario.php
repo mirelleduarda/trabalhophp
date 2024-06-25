@@ -30,9 +30,20 @@ class Funcionario
         
         return $dalFunc->Insert($func); //salva o registro de funcionário
 
+    }
 
+    public function Update(\MODEL\Funcionario $func) {
+        $dalFunc = new \DAL\Funcionario();   
 
+        ///regras de negócio que dependem do sistema  
+        
+        return $dalFunc->Update($func);
+    }
 
+    public function Delete(int $ID)
+    {   
+        $dalFunc = new \DAL\Funcionario();   
+        return $dalFunc->Delete($ID);
     }
 }
 ?>

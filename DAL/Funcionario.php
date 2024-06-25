@@ -38,12 +38,12 @@ class Funcionario
         $sql = "Select * from funcionario where ID=?;";
         $con = Conexao::conectar();
         $query = $con->prepare($sql);
-        $query->execute(array($id));
+        $query->execute(array($ID));
         $linha = $query->fetch(\PDO::FETCH_ASSOC);
         Conexao::desconectar();
 
         $fun = new \MODEL\Funcionario();
-        $fun->setId($linha['ID']);
+        $fun->setID($linha['ID']);
         $fun->setNome($linha['nome']);
         $fun->setDataNascimento($linha['dataNascimento']);
         $fun->setCPF($linha['CPF']);
@@ -58,11 +58,32 @@ class Funcionario
 
     public function Insert(\MODEL\Funcionario $fun)
     {
-        $sql = "INSERT INTO funcionario (ID, nome, dataNascimento, CPF, endereco, cidade, telefone, email, cargoID) VALUES (?,?,?,?,?,?,?,?,?) ;";
+        $sql = "INSERT INTO funcionario (nome, dataNascimento, CPF, endereco, cidade, telefone, email, cargoID) VALUES ('{$fun->getNome()}','{$fun->getDataNascimento()}','{$fun->getCPF()}','{$fun->getEndereco()}','{$fun->getCidade()}','{$fun->getTelefone()}','{$fun->getEmail()}','{$fun->getCargoID()}');";
 
         $con = Conexao::conectar();
+        $result = $con->query($sql);
+        $con = Conexao::desconectar();
+      
+        return $result; 
+    }
+
+    public function Update(\MODEL\Funcionario $fun){
+        $sql = "UPDATE funcionario SET nome = ?, dataNascimento = ?, CPF = ?, endereco = ?, cidade = ?, telefone = ?, email = ?, cargoID = ? WHERE ID = ?;";
+        
+        $con = Conexao::conectar();
         $query = $con->prepare($sql);
-        $result = $query->execute(array($fun->getID(), $fun->getNome(), $fun->getDataNascimento(), $fun->getCPF(), $fun->getEndereco(), $fun->getCidade(), $fun->getTelefone(), $fun->getEmail(), $fun->getCargoID()));
+        $result = $query->execute(array($fun->nome(), $fun->getDataNascimento(), $fun->getCPF(), $fun->getEndereco(), $fun->getCidade() , $fun->getTelefone(), $fun->getEmail(), $fun->getCargoID()));
+        $con = Conexao::desconectar();
+      
+        return $result; 
+    }
+
+    public function Delete($ID){
+        $sql = "delete from funcionario WHERE ID = ?;";
+        
+        $con = Conexao::conectar();
+        $query = $con->prepare($sql);
+        $result = $query->execute(array( $ID ));
         $con = Conexao::desconectar();
       
         return $result; 

@@ -16,7 +16,7 @@
   $funcionario->setCargoID($_POST['txtCargoID']);
 
   $bllFunc = new \BLL\Funcionario(); 
-  $result =  $bllFunc->Insert($funcionario);    
+  $result =  $bllFunc->Update($funcionario);    
 
 
   header("location: lstFuncionario.php");

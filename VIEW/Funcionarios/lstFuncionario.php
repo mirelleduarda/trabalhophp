@@ -57,7 +57,7 @@
                         <td><?php echo $funcionario->getCargoID(); ?></td>
 
                         <td>
-                            <a class="btn-floating blue accent-4 waves-effect" onclick="JavaScript:location.href='formFuncionario.php?id=' + '<?php echo $funcionario->getID(); ?>'">
+                            <a class="btn-floating blue accent-4 waves-effect" onclick="JavaScript:location.href='formEditFuncionario.php?id=' + '<?php echo $funcionario->getID(); ?>'">
                                 <i class="material-icons">edit</i>
                             </a>
                             <a class="btn-floating red accent-4">
