@@ -100,10 +100,10 @@ nav{
 }
 
 .estilo-lista{
-    margin-left: 8rem;
-    margin-right: 6rem;
-    text-align: center;
-    font-size: 20px;
+  margin-left: 8rem;
+  margin-right: 6rem;
+  text-align: center;
+  font-size: 20px;
 }
 
 .cadastrar{
@@ -161,6 +161,8 @@ nav{
   box-sizing: border-box;
   font-family: 'Open Sans', sans-serif;
 }
+
+
 .footer {
   color: var(--cor-secundaria);
   background-color: var(--cor-terciaria);
@@ -170,6 +172,10 @@ nav{
   font-weight: 400;
   font-size: 0.875rem;
   background: #3c2f2f;
+}
+
+.altura {
+  height: 3rem;
 }
 
 .footer .footer-row {

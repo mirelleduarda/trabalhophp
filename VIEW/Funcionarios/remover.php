@@ -1,5 +1,5 @@
 <?php 
-    namespace VIEW\Fncionario;
+    namespace VIEW\Funcionario;
     include_once 'C:\xampp\htdocs\trabalhophp\BLL\Funcionario.php'; 
 
     $ID = $_GET['id']; 

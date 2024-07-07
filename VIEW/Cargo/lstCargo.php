@@ -11,7 +11,7 @@
 
 <head>
 <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="logo.ico" href="/trabalhophp/images/logo.ico">
     <link rel="stylesheet" href="/trabalhophp/css/style.css">
     <!-- Compiled and minified CSS -->
@@ -28,7 +28,11 @@
 		<br>
 		<div class="estilo-lista blue-grey lighten-5">
             <div class="center blue-grey darken-4">
-                <h1 class="titulo-lista white-text">Cargos</h1>
+                <h1 class="titulo-lista white-text">Cargos
+                    <a class="cadastrar waves-effect brown btn" onclick="location.href='formCargo.php'">
+                        <i class="material-icons left"></i>Cadastrar Cargo
+                    </a>
+                </h1>
             </div>
 			<table class="highlight">
 				<tr>
@@ -36,6 +40,7 @@
 				<th>Nome</th>
 				<th>Descrição</th>
 				<th>Salário Base</th>
+                <th>Operações</th>
 				</tr>
 				
 				<?php foreach ($lstCargo as $cargo) { ?>
@@ -44,6 +49,15 @@
                         <td><?php echo $cargo->getNome(); ?></td>
                         <td><?php echo $cargo->getDescricao(); ?></td>
                         <td><?php echo $cargo->getSalarioBase(); ?></td>
+
+                        <td>
+                            <a class="btn-floating blue accent-4 waves-effect" onclick="JavaScript:location.href='formEditCargo.php?id=' + '<?php echo $cargo->getID(); ?>'">
+                                <i class="material-icons">edit</i>
+                            </a>
+                            <a class="btn-floating red accent-4" onclick="JavaScript: remover( <?php echo $cargo->getID(); ?> )">
+                                <i class="material-icons">delete_forever</i>
+                            </a>
+                        </td>
 					</tr>
 				<?php } ?>
 			</table>
@@ -106,3 +120,11 @@
 </body>
 
 </html>
+
+<script>
+    function remover(ID) {
+        if (confirm('Deseja excluir permanentemente o cargo do ID ' + ID + '?')) {
+            location.href = 'remover.php?id=' + ID;
+        }
+    }
+</script>

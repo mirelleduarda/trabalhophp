@@ -8,27 +8,27 @@
     public function __construct() { }
 
     public function getID(){
-        return $this->ID; 
+      return $this->ID; 
     }
 
     public function setID(int $ID){
-        $this->ID = $ID;     
+      $this->ID = $ID;     
     }
 
     public function getNome(){
-    return $this->nome; 
+      return $this->nome; 
     }
 
     public function setNome(string $nome){
-       $this->nome = $nome;     
+      $this->nome = $nome;     
     }
 
     public function getDescricao(){
-        return $this->descricao;       
+      return $this->descricao;       
     }
 
     public function setDescricao(string $descricao){
-        $this->descricao = $descricao; 
+      $this->descricao = $descricao; 
     }
   }
 ?>

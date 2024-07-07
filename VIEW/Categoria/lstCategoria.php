@@ -29,20 +29,36 @@
             <br>
             <div class="estilo-lista blue-grey lighten-5">
                 <div class="center blue-grey darken-4">
-                    <h1 class="titulo-lista white-text">Categorias</h1>
+                    <h1 class="titulo-lista white-text">Categorias
+                        <a class="cadastrar waves-effect brown btn" onclick="location.href='formCategoria.php'">
+                            <i class="material-icons left"></i>Cadastrar Categoria
+                        </a>
+                    </h1>
                 </div>
                 <table class=" highlight">
                     <tr>
                         <th>ID</th>
                         <th>Nome</th>
                         <th>Descrição</th>
+                        <th>Operações</th>
                     </tr>
+
+                    
 
                     <?php foreach ($lstCategoria as $categoria) { ?>
                         <tr>
                             <td><?php echo $categoria->getID(); ?></td>
                             <td><?php echo $categoria->getNome(); ?></td>
                             <td><?php echo $categoria->getDescricao(); ?></td>
+
+                            <td>
+                                <a class="btn-floating blue accent-4 waves-effect" onclick="JavaScript:location.href='formEditCategoria.php?id=' + '<?php echo $categoria->getID(); ?>'">
+                                    <i class="material-icons">edit</i>
+                                </a>
+                                <a class="btn-floating red accent-4" onclick="JavaScript: remover( <?php echo $categoria->getID(); ?> )">
+                                    <i class="material-icons">delete_forever</i>
+                                </a>
+                            </td>
 
                         </tr>
                     <?php } ?>
@@ -106,3 +122,11 @@
 </body>
 
 </html>
+
+<script>
+    function remover(ID) {
+        if (confirm('Deseja excluir permanentemente a categoria do ID ' + ID + '?')) {
+            location.href = 'remover.php?id=' + ID;
+        }
+    }
+</script>

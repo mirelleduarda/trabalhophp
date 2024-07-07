@@ -112,22 +112,6 @@
     
     <br>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-        var errorMessage = '<?php echo $erro; ?>';
-        if (errorMessage) {
-            var errorDiv = document.getElementById('error-message');
-            if (errorDiv) { // Verifica se o elemento foi encontrado
-                errorDiv.textContent = errorMessage;
-                errorDiv.style.display = 'block';
-                M.toast({html: errorMessage, classes: 'rounded red'});
-            } else {
-                console.error('Elemento com ID "error-message" não encontrado.');
-            }
-        }
-        });
-    </script>
-
 </body>
 
 </html

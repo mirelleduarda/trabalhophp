@@ -7,7 +7,6 @@
   $bllFunc = new BLL\Funcionario();
   $funcionario = $bllFunc->SelectByID($ID);
 
- // echo "Descricao: ". $equipamento->getDescricao() . "</br>";
 ?>
 
 <!DOCTYPE html>
